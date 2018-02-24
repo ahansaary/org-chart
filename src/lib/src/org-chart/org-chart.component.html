@@ -1,5 +1,5 @@
 <oc-employee *ngIf="topEmployee" [employee]="topEmployee" [hasManager]="hasManager"></oc-employee>
-<div class="oc-reports">
+<div class="oc-reports" *ngIf="!topEmployee?.collapsed">
 	<ng-container *ngFor="let employee of topEmployee?.subordinates; first as isFirst; last as isLast">
 		<div class="oc-org-container">
 			<div class="oc-h-bar-container">

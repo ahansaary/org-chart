@@ -2,5 +2,9 @@
 <div class="oc-box oc-border oc-background">
 	<div class="oc-name">{{employee?.name}}</div>
 	<div class="oc-designation">{{employee?.designation}}</div>
+	<div class="oc-collapse" *ngIf="employee?.subordinates.length" (click)="employee.collapsed = !employee.collapsed">
+		<span *ngIf="employee.collapsed">+</span>
+		<span *ngIf="!employee.collapsed">&minus;</span>
+	</div>
 </div>
-<div class="oc-h-bar oc-border" *ngIf="employee?.subordinates.length"></div>
+<div class="oc-h-bar oc-border" *ngIf="!employee?.collapsed && employee?.subordinates.length"></div>

@@ -16,3 +16,16 @@
 	font-style: italic;
 	white-space: nowrap;
 }
+
+.oc-collapse {
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid #333;
+	border-radius: 3px;
+	color: #333;
+	background-color: #fff;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	margin: 5px;
+}
